@@ -1,0 +1,57 @@
+version = 0.1
+[default]
+
+[default.build.parameters]
+use_container = true
+debug = true
+
+[dev]
+
+[dev.global.parameters]
+s3_bucket="dev-hello-world-bucket"
+stack_name="dev-hello-world-stack"
+debug = true
+
+[dev.build]
+[dev.build.parameters]
+use_container = true
+
+[dev.deploy]
+[dev.deploy.parameters]
+capabilities="CAPABILITY_IAM"
+fail_on_empty_changeset=false
+confirm_changeset=false
+
+[staging]
+
+[staging.global.parameters]
+s3_bucket="staging-hello-world-bucket"
+stack_name="staging-hello-world-stack"
+debug = true
+
+[staging.build]
+[staging.build.parameters]
+use_container = true
+
+[staging.deploy]
+[staging.deploy.parameters]
+capabilities="CAPABILITY_IAM"
+fail_on_empty_changeset=false
+confirm_changeset=false
+
+[prod]
+
+[prod.global.parameters]
+s3_bucket="prod-hello-world-bucket"
+stack_name="prod-hello-world-stack"
+debug = true
+
+[prod.build]
+[prod.build.parameters]
+use_container = true
+
+[prod.deploy]
+[prod.deploy.parameters]
+capabilities="CAPABILITY_IAM"
+fail_on_empty_changeset=false
+confirm_changeset=false
